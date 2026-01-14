@@ -7,6 +7,15 @@
 
 /* universal-designs */
 
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+main > section {
+  margin: 130px;
+}
+
 .display-flex {
   display: flex;
 }
@@ -90,13 +99,62 @@
   width: 100%;
 }
 
+/* Teams and features */
+
+.Teams {
+  align-items: center;
+}
+
+.team-img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.our-features-content {
+  margin-left: 130px;
+  max-width: 530px;
+}
+
+.feature-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
 /* Media Queries */
 
 /* Small Device */
 
 @media screen and (max-width: 576px) {
   .navbar,
-  .nav-links {
+  .nav-links,
+  .Teams {
     flex-direction: column;
+  }
+
+  .team-img-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .our-features-content {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+/* Medium Device */
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .Teams {
+    flex-direction: column;
+  }
+
+  /* .team-img-container {
+    grid-template-columns: repeat(1, 1fr);
+  } */
+
+  .our-features-content {
+    margin: 50px auto;
+    text-align: center;
   }
 }
